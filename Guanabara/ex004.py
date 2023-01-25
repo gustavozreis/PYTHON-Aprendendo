@@ -1,0 +1,10 @@
+dado = input('Digite algo\n')
+
+print('O tipo primitivo desse valor é', type(dado))
+print('Só tem espaços?', dado.isspace())
+print('É um número?', dado.isnumeric())
+print('É alfabético?', dado.isalpha())
+print('É alfanumérico?', dado.isalnum())
+print('Está em maiscula?', dado.isupper())
+print('Está em minuscula?', dado.islower())
+print('Está capitalizada?', dado.istitle())

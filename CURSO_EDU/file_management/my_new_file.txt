@@ -1,0 +1,3 @@
+Arquivo aberto e inserida esse frase.
+Nova linha adicionada.
+Segunda linha adicionada.
