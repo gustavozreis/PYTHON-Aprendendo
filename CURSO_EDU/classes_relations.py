@@ -9,42 +9,54 @@
 # Exiba o nome do carro, motor e fabricante na tela
 
 class Car:
-    def __init__(self, name, motor) -> None:
-        self.name = name
-        self.motor = motor
+    def __init__(self, name) -> None:
+       self.name = name
+       self._motor = None
+       self._brand = None
+       
+    @property
+    def motor(self):
+        return self._motor
+    
+    @motor.setter
+    def motor(self, value):
+        self._motor = value
         
-    def add_motor(self, motor):
-        self.motor = motor
+    @property
+    def brand(self):
+        return self._brand
+    
+    @brand.setter
+    def brand(self, value):
+        self._brand = value
+        
+    def car_specs(self):
+        print(self.name, ' | ', self._motor.name, ' | ', self._brand.name)
 
 
 class Motor:
     def __init__(self, name) -> None:
-        self.name = name
-        
+        self.name = name        
         
 class Brand:
     def __init__(self, name):
         self.name = name
-    
-    def build_car(self, car):
-        self.car = car
-        
-    def car_spec(self):
-        print(self.name, '|', self.car.name, '|', self.car.motor.name)
         
         
-motor_v8 = Motor('Motor V8')
-
-camaro = Car('Camaro', motor_v8)
-# camaro.add_motor(motor_v8)
-print(camaro.motor.name)
-
-
 chevrolet = Brand('Chevrolet')
-chevrolet.build_car(camaro)
+v8 = Motor('V8')
 
-print(chevrolet.name,',', chevrolet.car.name,',', chevrolet.car.motor.name)
-print()
+ford = Brand('Ford')
+motor_v12 = Motor('V12')
 
-chevrolet.car_spec()
+camaro = Car('Camaro')
+camaro.brand = chevrolet
+camaro.motor = v8
+
+ferrari = Car('Ferrari')
+ferrari.motor = motor_v12
+ferrari._brand = ford
+
+help(Car)
+
         
