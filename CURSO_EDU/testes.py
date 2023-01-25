@@ -1,16 +1,21 @@
 class Person:
+    
+    __foo = 2
+    
     def __init__(self, name, age) -> None:
         self.name = name
         self.age = age
-        self.height = None
+        self.__foo = 2
         
-    def set_height(self, height):
-        self.height = height
+    def test(self):
+        print(self.__foo)
         
+    def __private(self):
+        print(2)
+        
+    
+gustavo = Person('gustavo', 35)    
+    
+print(gustavo.test())
 
-gustavo = Person('Gustavo', 32)
-print(gustavo.height)
-
-gustavo.set_height(170)
-
-print(gustavo.height)
+print(gustavo.__foo)
