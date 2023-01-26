@@ -1,6 +1,7 @@
 # Abstração
 
 from asyncore import write
+from encodings.utf_8 import encode
 from pathlib import Path
 
 LOG_FILE = Path(__file__).parent / 'log.txt'

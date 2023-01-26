@@ -1,2 +1,6 @@
 Error: qualquer coisa (LogFileMixin)
 Success: sucesso (LogFileMixin)
+Success: iPhone está ligado. (Smartphone)
+Error: qualquer coisa (LogFileMixin)
+Success: sucesso (LogFileMixin)
+Success: iPhone está ligado. (Smartphone)
