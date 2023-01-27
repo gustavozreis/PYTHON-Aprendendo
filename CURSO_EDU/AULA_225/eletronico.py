@@ -29,5 +29,6 @@ class Smartphone(Eletronic, LogFileMixin):
             msg = f'{self.name} está desligado'
             self.log_error(msg)
         
+
         
         
