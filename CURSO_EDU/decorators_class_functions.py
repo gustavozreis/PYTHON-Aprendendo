@@ -1,3 +1,6 @@
+from mimetypes import init
+
+
 def change_speed(cls):
     def new_my_speed(self):
         return self.velocity * 50
@@ -30,4 +33,23 @@ class Multiplicar:
 def somar(x, y):
     return x + y
 
-print(somar(2,5))
+# print(somar(2,5))
+
+class Multiplicar2:
+    def __init__(self, multiplicador) -> None:
+        self.multiplicador = multiplicador
+    
+    def __call__(self, func):
+        def internal_func(*args, **kwargs):
+            resultado = func(*args, **kwargs)
+            return resultado * self.multiplicador
+        return internal_func
+        
+        
+@Multiplicar2(10)
+def somar2(x, y):
+    return x + y
+
+print(somar2(2, 5)) 
+        
+        
